@@ -21,15 +21,15 @@ console.log("### Declearing and initializing the primitive data types...");
 let num = 25;               //Number data type (2 to power 53)
 let int= BigInt(55);        // BigInt data type (greater than 2 to power 53)
 let str = "String Value";   //String data type
-let boolean = true;         //Boolean data type
-let this_null = null ;     // Null data type
+let bool = true;         //Boolean data type(can be true or false)
+let this_null = null;     // Null data type
 let undef = undefined;     // Undefined data type
 let sym = Symbol("sym");          // Symbol data type
 
 
 // Non-Primitive Data Type --> Non-primitive data types are built using primitive data types. They are also called derived or reference data types.
 
-// Type        typeOf return value
+// Type        typeof return value
 // Object       "object"
 // Array         "array"
 // Function      "function"
@@ -37,7 +37,7 @@ let sym = Symbol("sym");          // Symbol data type
 console.log("### Declearing and initializing the non-primitive data types...");
 
 // Object --> Object store data in key-value pair
-let user = {                   
+const user = {                   
     userName:"Manasvi",
     userAge: 10,
     userEmail:"manu@gmail.com",
@@ -48,7 +48,7 @@ let user = {
 console.log("This is a Object:", user);
 
 //Array
-let users = ["Nancy","John","Swany","Suhana"]  // Array can also store different type of data and objects
+const users = ["Nancy","John","Swany","Suhana"];  // Array can also store different type of data and objects
 
 //Printing Array
 console.log("This is an Array:",users);
@@ -60,6 +60,21 @@ function greet(name) { return "Hello, " + name + "!"; }
 
 // Calling the function
 console.log(greet("This is a Function"));
+
+
+//Printing typeof values of difeferent variables
+console.log("### Printing the typeof value of variables...");
+console.log(typeof(num));
+console.log(typeof(int));
+console.log(typeof(str));
+console.log(typeof(bool));
+console.log(typeof(this_null));
+console.log(typeof(undef));
+console.log(typeof(sym));
+console.log(typeof(user));
+console.log(typeof(users));
+console.log(typeof(greet));
+console.log("Complete printing the typeof value of variables.");
 
 
 
