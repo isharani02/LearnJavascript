@@ -24,7 +24,7 @@ let str = "String Value";   //String data type
 let boolean = true;         //Boolean data type
 let this_null = null ;     // Null data type
 let undef = undefined;     // Undefined data type
-let sym = symbol;          // Symbol data type
+let sym = Symbol("sym");          // Symbol data type
 
 
 // Non-Primitive Data Type --> Non-primitive data types are built using primitive data types. They are also called derived or reference data types.
@@ -59,7 +59,7 @@ console.log("This is an Array:",users);
 function greet(name) { return "Hello, " + name + "!"; }
 
 // Calling the function
-console.log(greet("Ajay"));
+console.log(greet("This is a Function"));
 
 
 
