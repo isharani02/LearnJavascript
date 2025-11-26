@@ -6,10 +6,10 @@
 
 //Variable Declaration
 console.log("***--Declearing and initialializing the variables--***");
-const userName="Isha Rani";
-let userEmail="isha@gmail.com";
-var userPassword="13456";
-userCity="Bhagalpur";
+const userName = "Isha Rani";
+let userEmail = "isha@gmail.com";
+var userPassword = "13456";
+userCity = "Bhagalpur";
 
 console.log("Completed declaration and initalization of all the variables");
 
