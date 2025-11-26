@@ -74,7 +74,17 @@ console.log(typeof(sym));
 console.log(typeof(user));
 console.log(typeof(users));
 console.log(typeof(greet));
+
 console.log("Complete printing the typeof value of variables.");
+
+// About Symbol
+let sym1 = Symbol("123");
+let sym2 = Symbol("123")
+
+// Symbol always creates a unique value, even if two symbols have the same description.
+console.log("Compare Symbols Data Type :", sym1===sym2);
+
+
 
 
 
