@@ -6,9 +6,7 @@
 // Like str + str + num => First is str so all will be treated as str.
 // Like num + num + str => First is num so all will be treared as num.
 
-
 //1.Arithmetic Operators
-
 
 //Operator	Description
 //  +	     Addition
@@ -20,38 +18,38 @@
 // ++	     Increment
 // --	     Decrement
 
-console.log("Operation on numbers")
+console.log("Operation on numbers");
 let num1 = 5;
 let num2 = 3;
 
 console.log("Value of Number1:", num1);
 console.log("Value of Number2:", num2);
-console.log("Addition :", num1+num2);
-console.log("Subtraction :", num1-num2);
-console.log("Multiplication :", num1*num2);
-console.log("Divison :", num1/num2);
-console.log("Power :", num1**2);
-console.log("Remainder :", num1%num2);
+console.log("Addition :", num1 + num2);
+console.log("Subtraction :", num1 - num2);
+console.log("Multiplication :", num1 * num2);
+console.log("Divison :", num1 / num2);
+console.log("Power :", num1 ** 2);
+console.log("Remainder :", num1 % num2);
 
 // Operation on different data types
 console.log("Operation on Strings");
 
 let str1 = "Hello";
-let str2 = "World";
+let str2 = " World!";
 let num3 = 345;
 
 console.log("Value of String1:", str1);
 console.log("Value of String2:", str2);
 console.log("Value of Number3", num3);
-console.log("Add :", str1+str2);
-console.log("Add :", str1+num3);
-console.log("Addition of String and Number :", str1+str2+num3);
-console.log("Sub :", str1-str2);
-console.log("Sub :", str1-num1);
-console.log("Multiply :", str1*str2);
-console.log("Divide :", str1/str2);
-console.log("Power :", str1**str2);
-console.log("Reaminder :", str1%str2);
+console.log("Add :", str1 + str2);
+console.log("Add :", str1 + num3);
+console.log("Addition of String and Number :", str1 + str2 + num3);
+console.log("Sub :", str1 - str2);
+console.log("Sub :", str1 - num1);
+console.log("Multiply :", str1 * str2);
+console.log("Divide :", str1 / str2);
+console.log("Power :", str1 ** str2);
+console.log("Reaminder :", str1 % str2);
 
 // Operation on Multiple Datatypes
 
@@ -64,8 +62,8 @@ console.log("Value of String3:", str3);
 console.log("Value of String4:", str4);
 console.log("Value of Number4:", num4);
 console.log("Value of Number5:", num5);
-console.log("Addition of Str3,Str4,Num5 and Num6 :", str3+str4+num4+num5);
-console.log("Addition of Num4,Num5,Str3 and Str4 :", num4+num5+str3+str4);
+console.log("Addition of Str3,Str4,Num5 and Num6 :", str3 + str4 + num4 + num5);
+console.log("Addition of Num4,Num5,Str3 and Str4 :", num4 + num5 + str3 + str4);
 
 // Increment Operator and Decrement Operator
 // Syntax
@@ -90,8 +88,7 @@ let gameCounter = 100;
 gameCounter++;
 console.log(gameCounter);
 
-// Operation on Boolean Datatype --> Not Recommend.
-
+// Operation on Boolean Datatype --> Not Recommended.
 
 //2.Assignment Operators
 
@@ -108,14 +105,12 @@ console.log(gameCounter);
 console.log("Operation on Assignment Opeartor");
 let num = 10;
 
-num += 5;   // Addition Assignment Operator
-num -= 3;   // Subtraction Assignment Operator
-num *= 2;   // Multiplication Assignment Operator
-num /= 3;   // Divison Assignment Operator
-num %= 2;   // Remainder/Modulus Assignment Operator
-num **= 3;  // Exponential Assignment Operator
-
-
+num += 5; // Addition Assignment Operator
+num -= 3; // Subtraction Assignment Operator
+num *= 2; // Multiplication Assignment Operator
+num /= 3; // Divison Assignment Operator
+num %= 2; // Remainder/Modulus Assignment Operator
+num **= 3; // Exponential Assignment Operator
 
 //3.Comparison Operators
 
@@ -130,7 +125,48 @@ num **= 3;  // Exponential Assignment Operator
 //>=         greater than or equal to            x >= 5
 //<=         less than or equal to               x <= 5
 
+console.log("***Comparison***");
+//Return Boolean Value (True or False)
+let num8 = 3;
+let num9 = 5;
+let num0 = 6;
+let str5 = "7";
+let str6 = "6";
 
+console.log("Value of Number8 :", num8);
+console.log("Value of Number9 :", num9);
+console.log("Value of String5 :", str5);
+console.log("Value of String6 :", str6);
+
+console.log("***Comparison Operation on Number type***");
+
+//Only Numbers
+console.log("Equal to :", num8 == num9);
+console.log("Equal type :", num8 === num0); // Check Strictly
+console.log("Not Equal to :", num8 != num9);
+console.log("Not Equal Type :", num9 !== num8);
+console.log("Greater Than :", num0 > num9);
+console.log("Lessthan : ", num8 < num0);
+console.log("Greater Than or Equal To : ", num0 >= num9);
+console.log("Less Than or Equal to : ", num9 <= num8);
+
+//Numbers and Strings
+console.log("***Comparison Operation on String and Number type***");
+console.log("Equal to :", str5 == num9);
+console.log("Equal type(triple equal to) :", num8 === str5); // Check Strictly
+console.log("Equal to :", str5 == str6);
+console.log("Equal Type(triple equal to) :", str5 === str6);
+
+// null & undefined
+console.log("Greater Than : ", null > 0);            //Output: False
+console.log("Less Than : ", null < 0);              //Output: False
+console.log("Equals to : ", null == 0);            //Output: False
+console.log("Greater Than Equal To :", null >= 0); //Output: True  
+//Comparison convert null to a number,treating is as 0.That's why null>=0 is true and null>0 is false.
+
+console.log("Greater Than           : ", undefined > 0);
+console.log("Less Than              : ", undefined < 0);
+console.log("Equals to              : ", undefined == 0);
 
 //4.Logical Operators
 
@@ -141,11 +177,11 @@ num **= 3;  // Exponential Assignment Operator
 // !          logical NOT
 
 // Operation on AND Operator
-console.log(true && true);   // true
-console.log(true && false);  // false
+console.log(true && true); // true
+console.log(true && false); // false
 
 //Operation on OR Operator
-console.log(false || true);  // true
+console.log(false || true); // true
 console.log(false || false); // false
 
 //Operation on NOT Operator
@@ -154,16 +190,14 @@ console.log(!false);
 
 // ***Operator Precedence***
 
-//| Group           | Meaning                                     
-//| --------------- | -------------------------------------------- 
-//| **Please**      | Parentheses `()`                            
-//| **Enjoy**       | Exponentiation `**`                          
-//| **My**          | Multiplication `*`                           
-//| **Delicious**   | Division `/`                                
-//| **Apple**       | Addition `+`                                 
-//| **Sandwiches**  | Subtraction `-`                              
+//| Group           | Meaning
+//| --------------- | --------------------------------------------
+//| **Please**      | Parentheses `()`
+//| **Enjoy**       | Exponentiation `**`
+//| **My**          | Multiplication `*`
+//| **Delicious**   | Division `/`
+//| **Apple**       | Addition `+`
+//| **Sandwiches**  | Subtraction `-`
 //| **Later**       | Logical operators (`&&`, ` `) |
-//| **Cooked**      | Comparison operators (`==`, `===`, `>`, `<`) 
-//| **Beautifully** | Assignment (`=`, `+=`, etc.)                 
-
-
+//| **Cooked**      | Comparison operators (`==`, `===`, `>`, `<`)
+//| **Beautifully** | Assignment (`=`, `+=`, etc.)
