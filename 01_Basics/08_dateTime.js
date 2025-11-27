@@ -14,4 +14,5 @@ console.log("toTimeString() returns only time : ", myDate.toTimeString());
 console.log("toLocaleDateString() returns localize date : ", myDate.toLocaleDateString());
 
 //toLocalTimeString()   :   Returns localize time.
-console.log("toLocalTimeString() returns localize time : ", myDate.toLocalTimeString());
+console.log("toLocalTimeString() returns localize time : ", myDate.toLocalTimeString()); 
+
