@@ -40,3 +40,46 @@ console.log("splice() removed element : ", arr2); //Manipulate an actual array.
 const newArr = myArr.join();
 console.log("Before using join : ", myArr);
 console.log("After using join method : ", newArr);
+
+//Add two arrays
+
+const heroMarvel = ["Thor","Ironman","Spiderman","Wanda"];
+const heroDc = ["Batman","Supenman","Flash"];
+
+//const allHeros1 = heroMarvel + heroDc;       //Not recommended : + converts into a string insist of merging them 
+//console.log(allHeros1);                    //It became a one long string ,not an array  
+
+//const allHeros2 = heroMarvel.push(heroDc);
+//console.log(allHeros2);                      //push() adds heroDc as an single element,not merged array
+
+const allHeros3 = heroMarvel.concat(heroDc);  //Concatinate two array into an array using concat() method
+console.log(allHeros3);
+
+const allHeros = [...heroMarvel,...heroDc];  //Merges arrays using spred operaor
+console.log(allHeros);
+
+const nestedArray = ["Isha",[2, 3, [4, 5, [6, 7], [7, 8, [5, 9]]]]];
+
+const clearArray = nestedArray.flat(6);      //flat() flattens a array up to the given depth
+console.log(clearArray);
+
+console.log(Array.isArray(nestedArray));
+
+let = myName = "Isha Rani";
+let = myId = 1114;
+let = myPhone = 999666333;
+console.log(myArr);
+
+console.log(Array.from(myName));                //  Convert to an array, all passing element to an array.
+
+console.log(myArr);
+
+console.log(Array.of(myName,myId,myPhone));     //  Returns an array, all passing element to an array.
+
+// To check Array is empty or not
+if (myArr.length === 0) {
+    console.log("Array is empty");
+}
+else {
+    console.log("Array have some value.");
+}
