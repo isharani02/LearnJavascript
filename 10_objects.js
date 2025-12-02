@@ -5,7 +5,7 @@
 const mySym = Symbol("myKey1");
 
 //Object Literal Declaration :
-const JsUser = {
+const jsUser = {
   name: "Isha",
   age: 23,
   location: "Kolkata",
@@ -33,27 +33,27 @@ const JsUser = {
 //Accessing Properties
 //-------------------------------
 
-console.log(JsUser.name); //Dot notaton for accessing object properties
+console.log(jsUser.name); //Dot notaton for accessing object properties
 
 //Accessing object in new way
-console.log(JsUser["name"]); //Generally use in special cases(Bracket notation)
+console.log(jsUser["name"]); //Generally use in special cases(Bracket notation)
 
 //console.log(JsUser.full name);         //Getting error because property names with spaces cannot use dot notation
 
-console.log(JsUser["full name"]);  //Correct way to access a key contains spaces
+console.log(jsUser["full name"]);  //Correct way to access a key contains spaces
 
-console.log(JsUser[mySym]);  // Accessing symbol-based key
-console.log(typeof JsUser.mysym);  // Checking type of a normal key that *looks* like a symbol
+console.log(jsUser[mySym]);  // Accessing symbol-based key
+console.log(typeof jsUser.mysym);  // Checking type of a normal key that *looks* like a symbol
 
-console.log(JsUser.greeting());  //Calling Method
+console.log(jsUser.greeting());  //Calling Method
 
 //Declaring a method for jsUser outside of object
-JsUser.greetingTwo = function () {
+jsUser.greetingTwo = function () {
   console.log(`Hello JS User ${this.name}`);  // Use 'this' keyword so the function can access the object's own properties.
 };
 
-console.log(JsUser.greetingTwo());
-
+console.log(jsUser.greetingTwo());
+jsUser.greetingTwo();
 //-----------------------------------------------
 //*--Singleton Object and Non-Singleton Object--*
 //-----------------------------------------------
