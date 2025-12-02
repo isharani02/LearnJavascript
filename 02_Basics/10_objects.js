@@ -126,6 +126,15 @@ console.log(Object.entries(userObj)); //Returns an array of nested array contain
 //-------------------------
 console.log(userObj.hasOwnProperty("isLoggedIn")); //Check if the property exist and gives boolean(true or false)value.
 
+// Check if object is empty
+const emptyObject = {};
+
+if (Object.keys(emptyObject).length === 0) {
+    console.log("Object is empty");
+} else {
+    console.log("Object have some values.");
+    
+}
 
 // Non-Singleton Object (you can create multiple objects using {} or constructor)
 //const userObj2 = {};
@@ -139,8 +148,8 @@ const course = {
   coursePrice: 999
 }
 
-const {coursePrice: price} = course;
-console.log(price);
+const {coursePrice: price} = course;     // Destructuring the object and refering the name coursePrice to price.
+console.log(price);                      // Logging price using object destructured 
 
 // JSON(JavaScript Object Notation)
 //In pure JSON, both keys and string values MUST be in double quotes:
