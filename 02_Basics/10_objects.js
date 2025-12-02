@@ -129,3 +129,24 @@ console.log(userObj.hasOwnProperty("isLoggedIn")); //Check if the property exist
 
 // Non-Singleton Object (you can create multiple objects using {} or constructor)
 //const userObj2 = {};
+
+
+//Object De-Structuring
+//-----------------------------------
+
+const course = {
+  courseName: "JavaScript Series",
+  coursePrice: 999
+}
+
+const {coursePrice: price} = course;
+console.log(price);
+
+// JSON(JavaScript Object Notation)
+//In pure JSON, both keys and string values MUST be in double quotes:
+const employee={
+  "empId": 11,
+  "empName": "Isha Rani",
+  "empRole": "Web-Developer"
+};
+console.log("Printing JSON data : ", employee); //Printing JSON Data
