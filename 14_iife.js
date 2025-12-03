@@ -9,7 +9,7 @@
 //Simple function declaration(Not an IIFE)
 //------------------------------------
 function dbSQL(){
-    console.log(`DB CONNECTED.`);
+    console.log(`MySQL DB CONNECTED.`);
 };
 
 //IIFE
@@ -19,10 +19,10 @@ function dbSQL(){
 
  //Named IIFE
 (function dbMongo(){
-    console.log(`DB Connected.`);
+    console.log(`MongoDB Connected.`);
 })();
 
 // Arrow function IIFE with parameter
 ((name)=>{
-    console.log(`DB Connected Two ${name}`);
+    console.log(`Oracle DB Connected ${name}`);
 })("Isha");
