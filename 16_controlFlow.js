@@ -98,7 +98,10 @@ if(loggedInFromGoogle || loggedInFromEmail){
 };
 
 
-//Switch Case
+//Switch Case --> A switch statement checks one value and compares it to several possible options (called cases).
+//When it finds a matching case, it runs the code for that case.
+//It keeps running the following code until it reaches a break.
+//If none of the cases match, it runs the default section instead.
 
 let month = 6;
 
@@ -144,3 +147,59 @@ switch(month){
         break;                                        
 };
 
+//Truthy and Falsy Values
+//------------------------------------------
+let userName = "Ishita";
+let userEmail;
+let userArr = [];
+let users = {}; 
+
+if(userName){                       
+   console.log("A non-empty string always gives truthy values.");
+   console.log("Got user name");
+}else{
+    console.log("Didn't got user name");
+};
+
+if(userEmail){
+    console.log("Got user email.");
+}else{
+    console.log("A non-assigned variable gives a falsy value.");
+    console.log("Didn't get user email.");
+};
+
+if(userArr){ 
+    console.log("An empty array is also truthy value in js.");                       
+    console.log("Got user array");
+}else{
+    console.log("Didn't get user array");
+};
+
+
+if(users){
+    console.log("An empty object is also gives a truthy value.");
+    console.log("Got users object.");
+}else{
+    console.log("Didn't got user object");
+};
+
+/*JavaScript has only 7 falsy values:
+
+1. false
+2.  0
+3. -0
+4. "" (empty string)
+5. null
+6.undefined
+7.NaN
+
+JavaScript Truthy values
+
+" "         -   Space in quotes/string
+"0"         -   Zero in quotes/string
+[]          -   Empty Array
+{}          -   Empty Object
+"false"     -   Anything in quotes/string
+function(){}-   Empty Function
+
+*/
