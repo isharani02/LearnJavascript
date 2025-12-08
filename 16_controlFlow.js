@@ -27,27 +27,28 @@ if(3==3){
 };
 
 if(false){
-    console.log("If condition is false not execute the statement of if block.");
+    console.log("If condition is false, this statement will not execute.");
 };
 
-//Implicit scope of if-statement,can write multiple statement of if block in one line using coma.
+//Implicit scope of if-statement
+//Multiple statement can be written using commas(not recommended).
 //-------------------------------------------------------------------------------------------------
 
 if(true) console.log("This is the first statement."),console.log("This is second statement."); //Usually not recommend.
 
-//if-else Statement --> If statement is true execute the if statement if false then execute the else statement.
+//if-else Statement --> If statement is true execute the if statement otherwise execute the else statement.
 //-----------------------------------------------------------------------------------------------------------------
 const isUserLoggedIn = true;
 const temprature = 40;
 
 if(temprature < 50){
-    console.log("The condition is true,temprature is less than 50.");
+    console.log("Condition is true,temprature is less than 50.");
 }else{
     console.log("Not executed");
 };
 
 
-if(temprature > 50){
+if(temperature > 50){
     console.log("Not executed");
 }else{
     console.log("The condition is false,temprature is not greater than 50.");
@@ -72,12 +73,12 @@ if(score < 600){
  let userLoggenIn = true;
  let debitcard = true;
 
-//AND(&&) Operator  --> Both condition should be true. 
+//AND(&&) Operator  --> All conditions must be true. 
 //-----------------------------------------------------
  if(userLoggenIn && debitcard){
-    console.log("Allow to by courses.");
+    console.log("Allow to buy courses.");
  }else{
-    console.log("Not allowed to by courses.");
+    console.log("Not allowed to buy courses.");
  };
  
  if(userLoggenIn && debitcard && 2==2){
@@ -86,7 +87,7 @@ if(score < 600){
     console.log("Not allowed to buy courses.");
  };
 
-//OR(||) Operator
+//OR(||) Operator  --> Only one condition needs to be true.
 //---------------------------
 let loggedInFromGoogle = true;
 let loggedInFromEmail = false;
@@ -100,8 +101,8 @@ if(loggedInFromGoogle || loggedInFromEmail){
 
 //Switch Case --> A switch statement checks one value and compares it to several possible options (called cases).
 //When it finds a matching case, it runs the code for that case.
-//It keeps running the following code until it reaches a break.
-//If none of the cases match, it runs the default section instead.
+//Runs the matching cases until a break reached.
+//Runs the default if no cases matches.
 
 let month = 6;
 
@@ -110,7 +111,7 @@ switch(month){
         console.log("January");
         break;
     case 2:
-        console.log("Februrary");
+        console.log("February");
         break;
     case 3:
         console.log("March");
@@ -203,3 +204,32 @@ JavaScript Truthy values
 function(){}-   Empty Function
 
 */
+
+//Nullish Collaescing Operator(??) 
+//The ?? operator returns the right-hand value only when the left-hand value is null or undefined.
+
+let userName2;
+console.log(userName2 ?? "Guest"); 
+// Output: "Guest"
+
+let age = null;
+console.log(age ?? 18);
+// Output: 18
+
+let count = 0;
+console.log(count ?? 10);
+// Output: 0   (because 0 is not null or undefined)
+
+
+
+// Terniary Operator 
+// Synatx   -   condition ? true value : false value;
+// Evaluate the condition before "?".
+// If it is true -> run the code after "?".
+// If it is false -> run the code after ":".
+
+
+
+const checkUser = "Isha";
+checkUser == "Isha" ? console.log("Hi, User") : console.log("Please login.");
+
