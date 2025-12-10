@@ -69,7 +69,8 @@ for(const key in programming){
 }
 
 //forEach loop
-// Used to run a function for each item in an array, one by one.
+//Used to run a function for each item in an array, one by one.
+//It does not return any return value
 //--------------------------------------------------------------
 /*
 Syntax:
