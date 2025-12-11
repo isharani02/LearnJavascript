@@ -1,0 +1,64 @@
+<!-----**JavaScript DOM Introduction**----->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM Learning</title>
+    <style>
+      .bg-grey {
+        background-color: #212121;
+        color: #fff;
+      }
+    </style>
+  </head>
+  <body class="bg-grey">
+    <div>
+      <h1 id="main-heading" class="heading">DOM Learning</h1>
+      <p id="paragraph">This is a paragraph.</p>
+    </div>
+    <ul>
+      <li class="list-item">First Item</li>
+      <li class="list-item">Second Item</li>
+      <li class="list-item">Thied Item</li>
+    </ul>
+
+    <script>
+      //------------------------------------------------------------------
+      //Selecting a single element by its ID(getElementById)
+      const turnOrange = document.getElementById("main-heading");
+
+      //Change the text color of the heading 
+      turnOrange.style.color = "orange";
+      console.log(turnOrange);
+      //---------------------------------------------------------------------------------------------------
+
+      //Select multiple element of same class name using class(getElementByClass)
+      const changeFontStyle = document.getElementsByClassName('list-item'); //Returns a HTML Collection
+
+      //Converting HTMLCollection into an Array
+      const tempLiItem = Array.from(changeFontStyle);
+
+      // Apply italic font style to each list item using forEach
+      tempLiItem.forEach((li)=>{
+          li.style.fontStyle = 'italic';
+      })
+    //-------------------------------------------------------------------------------------------------------
+
+      //Select all li element using querySelectorAll
+      const turnGreen = document.querySelectorAll("li"); //Return a nodelist
+
+      // Change the background color of each <li> element to green using forEach
+      turnGreen.forEach((li) => {
+        li.style.backgroundColor = "green";
+      });
+      //--------------------------------------------------------------------------------------------------------
+
+      //Select single element using querySelector
+      const changeFont = document.querySelector('p');
+      //Change font weight of paragraph
+      changeFont.style.fontWeight = 'bold';
+      changeFont.style.fontStyle  = 'oblique';
+    </script>
+  </body>
+</html>
