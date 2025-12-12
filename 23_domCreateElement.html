@@ -1,0 +1,36 @@
+<!--JavaScript DOM Creat New Element-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Create New Element</title>
+  </head>
+  <body style="background-color: #212121;">
+    
+  </body>
+  <script>
+      //Create new element
+      const newDiv = document.createElement("div");
+      console.log(newDiv);
+      //Add class
+      newDiv.className = "main";
+      //Add random id
+      newDiv.id = Math.round(Math.random() * 10 + 1);
+      //Add attributes
+      newDiv.setAttribute("title", "generated");
+      //Add Text
+      //newDiv.innerText = "Writing text in new created div!";
+      // Add text using createTextNode (recommended)
+      const addText = document.createTextNode(
+        "Writing text in new created div using createTextNode..!"
+      );
+      newDiv.appendChild(addText);
+      //Append to the body
+      document.body.appendChild(newDiv);
+      //Add style
+      newDiv.style.padding = "10px";
+      newDiv.style.background = "lightblue";
+      newDiv.style.margin = "10px";
+    </script>
+</html>

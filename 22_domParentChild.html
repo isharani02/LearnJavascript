@@ -1,0 +1,70 @@
+<!--JavaScript DOM Parent-Child Properties-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM Parent-Child Properties</title>
+  </head>
+  <body style="background-color: #212121; color: #fff">
+    <!--Parent Node-->
+    <div class="week">
+      <!--Child Node-->
+      <div class="day">Monday</div>
+      <div class="day">Tuesday</div>
+      <div class="day">Wednesday</div>
+      <div class="day">Thursday</div>
+      <div class="day">Friday</div>
+      <div class="day">Saturday</div>
+      <div class="day">Sunday</div>
+    </div>
+  </body>
+  <script>
+    //Parent Properties
+    // Property               What it does                            Example
+    //|---------------------|-----------------------------------|--------------------------------------|
+    //| `parentNode`        | Direct parent node                | `child1.parentNode` → `<div>`        |
+    //| `parentElement`     | Direct parent element             | `child1.parentElement` → `<div>`     |
+    //| `children`          | All direct child elements         | `parent.children` → HTMLCollection   |
+    //| `childNodes`        | All child nodes (incl. text)      | `parent.childNodes` → NodeList       |
+    //| `firstChild`        | First child node                  | `parent.firstChild` → text/node      |
+    //| `lastChild`         | Last child node                   | `parent.lastChild` → text/node       |
+    //| `firstElementChild` | First child element               | `parent.firstElementChild` → `<p>`   |
+    //| `lastElementChild`  | Last child element                | `parent.lastElementChild` → `<span>` |
+    //| `hasChildNodes()`   | Checks if element has child nodes | `parent.hasChildNodes()` → true      |
+    //--------------------------------------------------------------------------------------------------
+
+    const parent = document.querySelector(".week");
+    console.log(parent);
+    console.log(parent.children);
+    console.log(parent.firstElementChild);
+    console.log(parent.lastElementChild);
+    console.log(parent.children[1]);
+    console.log(parent.children[1].innerHTML);
+    for (let i = 0; i < parent.children.length; i++) {
+      console.log(parent.children[i].innerHTML);
+    }
+    //Manipulating style
+    parent.children[1].style.color = 'orange';
+    //NodeList element will be 17 because childNodes includes text nodes created by line breaks and indentation inside HTML.
+    console.log(("NODES : ", parent.childNodes));   
+    
+
+    //Child Properties
+    // | Property                 | What it does                  | Example                                 |
+    // | ------------------------ | ----------------------------- | --------------------------------------- |
+    // | `parentNode`             | Direct parent of the child    | `child1.parentNode` → `<div>`           |
+    // | `parentElement`          | Direct parent element         | `child1.parentElement` → `<div>`        |
+    // | `nextSibling`            | Next node (could be text)     | `child1.nextSibling` → text/node        |
+    // | `previousSibling`        | Previous node (could be text) | `child2.previousSibling` → text/node    |
+    // | `nextElementSibling`     | Next sibling element          | `child1.nextElementSibling` → `<p>`     |
+    // | `previousElementSibling` | Previous sibling element      | `child2.previousElementSibling` → `<p>` |
+
+    const dayOne = document.querySelector(".week");
+    console.log(dayOne);
+    console.log(dayOne.parentElement);
+    console.log(dayOne.nextElementSibling);
+    console.log(dayOne.previousElementSibling);
+    
+  </script>
+</html>
