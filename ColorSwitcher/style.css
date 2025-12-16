@@ -1,0 +1,44 @@
+body {
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.button {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    margin: 8px;
+    display: inline-block;
+    border: 2px solid black;
+    cursor: pointer;
+    margin: 5px;
+}
+
+/* Colors */
+#grey {
+    background-color: gray;
+}
+
+#lightgreen {
+    background-color: lightgreen;
+}
+
+#orange {
+    background-color: orange;
+}
+
+#purple {
+    background-color: purple;
+}
+
+#darkblue {
+    background-color: darkblue;
+}
+
+#lightpink {
+    background-color: lightpink;
+}
