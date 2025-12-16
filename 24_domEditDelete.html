@@ -1,0 +1,46 @@
+<!--JavaScript DOM Edit and Delete-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Add,Edit & Delete</title>
+</head>
+<body>
+    <h2>List Items</h2>
+    <ul class="language">
+        <li>JavaScript</li>
+    </ul>
+</body>
+<script>
+    //Add Elements
+    function addLanguage(langName){
+        const li = document.createElement('li');
+        li.innerHTML = langName;
+        document.querySelector('.language').appendChild(li);
+    }
+    addLanguage('PHP');
+    addLanguage('Python');
+
+    function addOptiLang (langName){
+        const li = document.createElement('li');
+        li.appendChild(document.createTextNode(langName));
+        document.querySelector('.language').appendChild(li);
+    }
+    addOptiLang('Golang');
+
+    //Edit
+    const secondLang = document.querySelector("li:nth-child(2)");
+    //secondLang.innerText = 'TypeScript';
+    const newLi = document.createElement('li');
+    newLi.textContent ='TypeScript';
+    secondLang.replaceWith(newLi);
+
+    const firstLang = document.querySelector("li:first-child");
+    firstLang.outerHTML = '<li>C Programming</li>'
+    
+   //Delete(remove)
+   const lastLang = document.querySelector('li:last-child');
+   lastLang.remove();
+</script>
+</html>
